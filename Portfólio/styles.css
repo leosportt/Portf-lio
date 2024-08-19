@@ -1,4 +1,3 @@
-/* */
 :root {
     --main-white: #f0f0f0;
     --main-red: #be3144;
@@ -6,13 +5,11 @@
     --main-gray: #303841;
 }
 
-/* */
 * {
     margin: 0;
     padding: 0;
 }
 
-/* */
 *,
 *::before,
 *::after {
@@ -21,52 +18,27 @@
 
 html {
     box-sizing: border-box;
-
-    /*
-    *
-    *
-    */
     font-size: 62.5%;
     scroll-behavior: smooth;
 }
 
-/*
-*
-*
-*
-*
-*
-*/
-
-/*
-*
-*
-*
-*
-*/
-
-/* */
 @media (max-width: 75em) {
     html {
         font-size: 60%;
     }
 }
 
-/* */
 @media (max-width: 61.25em) {
     html {
         font-size: 58%;
     }
 }
 
-/* */
 @media (max-width: 28.75em) {
     html {
         font-size: 55%;
     }
 }
-
-/* */
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -105,7 +77,7 @@ img {
     width: 100%;
 }
 
-/* */
+/* Navegação */
 
 .nav {
     display: flex;
@@ -124,21 +96,6 @@ img {
     margin-right: 2rem;
 }
 
-@media (max-width: 28.75em) {
-    .nav {
-        justify-content: center;
-    }
-
-    .nav-list {
-        margin: 0 1rem;
-    }
-
-    .nav-list a {
-        font-size: 1.8rem;
-        padding: 1.5rem;
-    }
-}
-
 .nav-list a {
     display: block;
     font-size: 2.2rem;
@@ -149,7 +106,24 @@ img {
     background: var(--main-blue);
 }
 
-/* */
+@media (max-width: 28.75em) {
+    .nav {
+        justify-content: center;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        margin: 0 1rem;
+    }
+
+    .nav-list a {
+        font-size: 1.8rem;
+        padding: 1.5rem;
+    }
+}
+
+/* Seção de Boas-vindas */
 
 .welcome-section {
     display: flex;
@@ -167,8 +141,8 @@ img {
 }
 
 .welcome-hello-2 {
-    margin-top: 0; /* Remove a margem superior */
-    padding-top: 1rem; /* Adicionei padding-top pequeno para ajustar */
+    margin-top: 0;
+    padding-top: 1rem;
     padding-bottom: 25rem;
     padding-right: 0rem;
     font-size: 3rem;
@@ -178,9 +152,9 @@ img {
 }
 
 .welcome-title {
-    position: relative; /* Permite usar 'left' ou 'right' */
-    right: 25.1%; /* Ajuste conforme necessário */
-    width: 100%; /* Ajuste conforme necessário */
+    position: relative;
+    right: 25.1%;
+    width: 100%;
     padding-top: 1rem;
     padding-right: 0rem;
     padding-bottom: 1rem;
@@ -192,6 +166,10 @@ img {
     padding-bottom: 1rem;
 }
 
+.know-details {
+    font-size: 3.06rem;
+}
+
 .welcome-title-3 {
     padding-top: 0rem;
     padding-right: 91.5rem;
@@ -199,8 +177,8 @@ img {
 }
 
 .welcome-text {
-    position: relative; /* Permite usar 'left' ou 'right' */
-    left: 1.5%; /* Ajuste conforme necessário */
+    position: relative;
+    left: 1.5%;
     padding-left: 33.5rem;
     padding-right: 33.5rem;
     font-size: 3rem;
@@ -208,65 +186,65 @@ img {
     color: var(--main-red);
 }
 
-.know-links {
-    padding-left: 7.0rem;
+@media (max-width: 61.25em) {
+    .welcome-text {
+        font-size: 2.2rem;
+        padding-left: 5%;
+        padding-right: 5%;
+        text-align: center;
+    }
 }
 
-.know-details {
-    font-size: 3.3rem;
-    text-shadow: 2px 2px 1px #1f1f1f;
-    transition: transform 0.3s ease-out;
-}
+/* Imagens da Seção de Boas-vindas */
 
-.image-photo {
-    display: block;
-    position: relative; /* Permite usar 'left' ou 'right' */
-    right: 61.5%; /* Ajuste conforme necessário */
-    width: 30%; /* Ajuste conforme necessário */
-    height: auto;
-    padding-top: 1rem;
-}
-
-.image-photo-2 {
-    display: block;
-    position: relative; /* Permite usar 'left' ou 'right' */
-    right: 61.5%; /* Ajuste conforme necessário */
-    width: 30%; /* Ajuste conforme necessário */
-    height: auto;
-    padding-top: 20rem;
-}
-
+.image-photo,
+.image-photo-2,
 .image-photo-3 {
     display: block;
-    position: relative; /* Permite usar 'left' ou 'right' */
-    right: 61.5%; /* Ajuste conforme necessário */
-    width: 30%; /* Ajuste conforme necessário */
+    position: relative;
+    width: 30%;
     height: auto;
+    padding-top: 1rem;
+    right: 61.5%;
+}
+
+@media (max-width: 61.25em) {
+    .image-photo,
+    .image-photo-2,
+    .image-photo-3 {
+        width: 80%;
+        right: auto;
+        margin: 0 auto;
+    }
+}
+
+.image-photo-2,
+.image-photo-3 {
     padding-top: 20rem;
 }
 
 .image-computer {
     display: block;
-    position: relative; /* Permite usar 'left' ou 'right' */
-    right: 25%; /* Ajuste conforme necessário */
-    width: 100%; /* Ajuste conforme necessário */
+    position: relative;
+    right: 25%;
+    width: 100%;
     height: auto;
     padding-top: 1rem;
 }
 
 .btn-workana {
-  color: var(--main-red);
-  transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
+    color: var(--main-red);
+    transition: color 0.3s ease, text-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .btn-workana:hover {
-  color: #ff7f50; /* Muda a cor do texto */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  transform: scale(1.1);
-  text-decoration: underline;
+    color: #ff7f50;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+    text-decoration: underline;
 }
 
-/* */
+/* Seção de Projetos */
 
 .projects-section {
     text-align: center;
@@ -286,7 +264,6 @@ img {
     }
 }
 
-/* */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -295,7 +272,7 @@ img {
     max-width: 1170px;
     margin: 0 auto;
     margin-bottom: 6rem;
-    padding: 2rem 0rem
+    padding: 2rem 0rem;
 }
 
 @media (max-width: 30.625em) {
@@ -314,17 +291,12 @@ img {
     border-radius: 1px;
 }
 
-.code {
-    color: var(--main-gray);
-    transition: color 0.3s ease-out;
-}
-
 .project:hover .code {
     color: #ff7f50;
 }
 
 .project-image {
-    height: 75%; /* Ajustado para manter a proporção */
+    height: 75%;
     width: 100%;
     object-fit: cover;
 }
@@ -367,7 +339,7 @@ img {
     transition: transform 0.3s ease-out;
 }
 
-/* */
+/* Seção de Contato */
 
 .contact-section {
     display: flex;
@@ -414,28 +386,38 @@ img {
     transform: translateY(8px);
 }
 
-/* */
+@media (max-width: 28.75em) {
+    .contact-details {
+        font-size: 2rem;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 2rem;
+    }
+}
+
+/* Rodapé */
 
 footer {
     font-weight: 300;
     display: flex;
-    justify-content: space-evenly;
-    padding: 2rem;
+    justify-content: space-around;
+    flex-direction: row;
+    text-align: center;
+    padding: 3rem 2rem;
     background: var(--main-gray);
     border-top: 4px solid var(--main-red);
-}
-
-footer > p {
-    margin: 2rem;
-}
-
-footer i {
-    vertical-align: middle;
 }
 
 @media (max-width: 28.75em) {
     footer {
         flex-direction: column;
-        text-align: center;
+        padding: 4rem 2rem;
+    }
+
+    footer p {
+        margin: 1rem;
     }
 }
