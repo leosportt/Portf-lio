@@ -224,10 +224,24 @@ section {
     padding-top: 1rem;
     padding-bottom: 25rem;
     padding-right: 0rem;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 200;
     font-style: italic;
     color: var(--main-red);
+}
+
+@media (max-width: 61.25em) {
+.welcome-hello-2 {
+    margin-top: 0;
+    text-align: justify;
+    padding-top: 1rem;
+    padding-bottom: 25rem;
+    padding-right: 0rem;
+    font-size: 3rem;
+    font-weight: 200;
+    font-style: italic;
+    color: var(--main-red);
+    }
 }
 
 .welcome-title {
