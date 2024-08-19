@@ -206,10 +206,12 @@ img {
     .image-photo,
     .image-photo-2,
     .image-photo-3 {
+        display: flex;
+        align-items: center;
         width: 30%;
         margin: 1 auto;
+        right: auto; /* Remove o deslocamento para a direita */
     }
-}
 
 .image-photo-2,
 .image-photo-3 {
