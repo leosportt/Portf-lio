@@ -390,6 +390,13 @@ section {
   height: auto;
 }
 
+@media (max-width: 61.25em) {
+  .computer-legend .image-computer {
+    width: 250px;
+    height: auto;
+  }
+}
+
 .computer-legend .computer-text {
   visibility: hidden;
   width: 160px;
@@ -405,6 +412,25 @@ section {
   margin-left: -80px;
   opacity: 0;
   transition: opacity 0.3s;
+}
+
+@media (max-width: 61.25em) {
+  .computer-legend .computer-text {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 65%; /* Posiciona acima da imagem */
+    left: 50%;
+    margin-left: -80px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
 }
 
 .computer-legend .computer-text::after {
