@@ -48,6 +48,37 @@ body {
     color: var(--main-white);
 }
 
+.typing-container {
+    margin-top: 1;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 0rem;
+    font-size: 3rem;
+    font-weight: 200;
+    text-align: center;
+    font-style: italic;
+    color: var(--main-red);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid #61dafb;
+    width: 0;
+    animation: typing 3.5s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 25%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #61dafb; }
+}
+
+.padding-1 {
+  padding-bottom: 23rem;
+}
+
 h1,
 h2 {
     font-family: 'Raleway', sans-serif;
