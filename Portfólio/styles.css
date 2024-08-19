@@ -203,7 +203,7 @@ section {
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 350vh;
+        height: 380vh;
         background-color: #000;
         background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
     }
@@ -510,7 +510,7 @@ section {
 @media (max-width: 61.25em) {
   .contact-section-header > p {
     font-style: italic;
-    font-size: 2rem;
+    font-size: 4.5rem;
     }
 }
 
@@ -525,11 +525,9 @@ section {
 
 @media (max-width: 61.25em) {
   .contact-links {
-    display: grid;
-    justify-content: center;
-    width: 100%;
-    max-width: 200px;
-    margin-top: 4rem;
+    display: inline-table;
+    text-align: center;
+    padding-top: 15rem;
     }
 }
 
@@ -541,7 +539,7 @@ section {
 
 @media (max-width: 61.25em) {
   .contact-details {
-    font-size: 2.6rem;
+    font-size: 5.5rem;
     text-shadow: 2px 2px 1px #1f1f1f;
     transition: transform 0.3s ease-out;
     }
