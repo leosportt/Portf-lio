@@ -1,3 +1,126 @@
+#chatbot {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 320px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  font-family: "Inter", sans-serif;
+  z-index: 1000;
+}
+
+#chatbot-header {
+  background-color: #be3144;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+
+#chatbot-toggle-icon {
+  display: inline-block;
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#chatbot-body {
+  display: none;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  max-height: 300px;
+  opacity: 0;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+#chatbot-body.open {
+  display: block;
+  max-height: 400px;
+  opacity: 1;
+}
+
+#chatbot-messages {
+  height: 240px;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border-bottom: 1px solid #444;
+}
+
+#chatbot-input-area {
+  display: flex;
+  align-items: center;
+  background-color: #222;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#chatbot-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  background-color: #333;
+  color: white;
+  border-bottom-left-radius: 10px;
+  outline: none;
+}
+
+#chatbot-send {
+  padding: 10px;
+  border: none;
+  background-color: #be3144;
+  border-bottom-right-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message {
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  clear: both;
+}
+
+.user-message {
+  background-color: #0099ff;
+  color: white;
+  text-align: right;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+.bot-message {
+  background-color: #555;
+  color: white;
+  text-align: justify;
+}
+
+ol {
+  margin: 0;
+  padding: 0 0 0 20px;
+}
+
+ol li {
+  margin: 5px 0;
+}
+
+#chatbot-messages .message {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
 :root {
   --main-white: #f0f0f0;
   --main-red: #be3144;
