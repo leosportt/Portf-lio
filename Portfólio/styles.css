@@ -198,7 +198,7 @@ section {
 
 @media (max-width: 61.25em) {
     .welcome-section {
-        display: flex;
+        display: inline-flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -489,7 +489,7 @@ section {
     align-items: center;
     text-align: center;
     width: 100%;
-    height: 25vh;
+    height: 40vh;
     padding: 0 2rem;
     background: var(--main-gray);
     }
