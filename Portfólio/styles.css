@@ -65,6 +65,20 @@ body {
     animation: typing 3.5s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
 }
 
+@media (max-width: 61.25em) {
+  .typing-container {
+    padding-right: 54%;
+    font-size: 4.5rem;
+    font-weight: 200;
+    text-align: justify;
+    font-style: italic;
+    color: var(--main-red);
+    white-space: nowrap;
+    border-right: 1px solid #61dafb;
+    animation: typing 3.5s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+}
+}
+
 @keyframes typing {
     from { width: 0; }
     to { width: 25%; }
