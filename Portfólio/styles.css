@@ -60,7 +60,7 @@ body {
     color: var(--main-red);
     white-space: nowrap;
     overflow: hidden;
-    border-right: 1px solid #61dafb;
+    border-right: 0px solid #61dafb;
     width: 0;
     animation: typing 3.5s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
 }
@@ -74,7 +74,7 @@ body {
     font-style: italic;
     color: var(--main-red);
     white-space: nowrap;
-    border-right: 1px solid #61dafb;
+    border-right: 0px solid #61dafb;
     animation: typing 3.5s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
 }
 }
