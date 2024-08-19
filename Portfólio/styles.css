@@ -253,13 +253,8 @@ section {
 
 @media (max-width: 61.25em) {
   .know-links {
-    display: grid;
-    justify-content: center;
-    height: 400;
-    width: 100%;
-    max-width: 400px;
-    margin-top: 1rem;
-    padding: 1rem 2rem;
+    display: inline-table;
+    text-align: center;
     }
 }
 
@@ -269,7 +264,7 @@ section {
 
 @media (max-width: 61.25em) {
   .know-details {
-    font-size: 4.3rem;
+    font-size: 5.5rem;
     }
 }
 
