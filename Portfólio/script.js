@@ -27,159 +27,167 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-document
-  .getElementById("chatbot-header")
-  .addEventListener("click", toggleChatbot);
+// --------------------> //
 
-function toggleChatbot() {
-  var chatbotBody = document.getElementById("chatbot-body");
-  var toggleIcon = document
-    .getElementById("chatbot-toggle-icon")
-    .querySelector("svg");
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.getElementById('chatbot-header');
+    const toggleIcon = document.getElementById('chatbot-toggle-icon');
+    const sendButton = document.getElementById('chatbot-send');
+    const inputField = document.getElementById('chatbot-input');
+    const messageArea = document.getElementById('chatbot-messages');
 
-  if (chatbotBody.classList.contains("open")) {
-    chatbotBody.classList.remove("open");
-    toggleIcon.innerHTML =
-      '<path d="M0 0h24v24H0z" fill="none"/><path d="M12 15.5l6-6H6z"/>'; // Seta para baixo
-  } else {
-    chatbotBody.classList.add("open");
-    toggleIcon.innerHTML =
-      '<path d="M0 0h24v24H0z" fill="none"/><path d="M12 8.5l6 6H6z"/>'; // Seta para cima
-    displayWelcomeMessage();
-  }
-}
+    if (header && toggleIcon && sendButton && inputField && messageArea) {
+        header.addEventListener('click', toggleChatbot);
+        sendButton.addEventListener('click', sendMessage);
+        inputField.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
 
-function displayWelcomeMessage() {
-  var welcomeMessage = `
-        Olá! Seja bem-vindo ao meu site.\n\n
-        Como posso ajudar você hoje? Escolha uma opção digitando o número correspondente:\n\n
-        1. Currículo\n
-        2. Número de telefone\n
-        3. E-mail\n
-        4. LinkedIn\n
-        5. Instagram\n
-        6. Informações sobre mim\n
-        7. Conhecimentos\n
-        8. Certificações\n
-        9. Projetos\n
-        10. GitHub\n
-        11. Workana
-    `;
-  typeMessage("bot", welcomeMessage);
-}
+        function toggleChatbot() {
+            const chatbotBody = document.getElementById('chatbot-body');
 
-document.getElementById("chatbot-send").addEventListener("click", sendMessage);
-document
-  .getElementById("chatbot-input")
-  .addEventListener("keypress", function (e) {
-    if (e.key === "Enter") {
-      sendMessage();
+            if (chatbotBody.classList.contains('open')) {
+                chatbotBody.classList.remove('open');
+                toggleIcon.innerHTML = '<path d="M0 0h24v24H0z" fill="none"/><path d="M12 15.5l6-6H6z"/>'; // Seta para baixo
+            } else {
+                chatbotBody.classList.add('open');
+                toggleIcon.innerHTML = '<path d="M0 0h24v24H0z" fill="none"/><path d="M12 8.5l6 6H6z"/>'; // Seta para cima
+                if (messageArea.children.length === 0) {
+                    showWelcomeMessage(); // Exibir mensagem de boas-vindas ao abrir o chatbot
+                } else {
+                    // Rolagem automática para o final da área de mensagens ao abrir
+                    messageArea.scrollTop = messageArea.scrollHeight;
+                }
+            }
+        }
+
+        function sendMessage() {
+            const message = inputField.value.trim();
+
+            if (message !== "") {
+                appendMessage('user', message);
+                processUserInput(message);
+                inputField.value = '';
+            }
+        }
+
+        function appendMessage(sender, message, callback) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message ' + (sender === 'user' ? 'user-message' : 'bot-message');
+            messageArea.appendChild(messageDiv);
+
+            typeMessage(messageDiv, message, callback);
+        }
+
+        function typeMessage(element, text, callback) {
+            let index = 0;
+            const speed = 20; // Velocidade da digitação
+
+            function type() {
+                if (index < text.length) {
+                    element.textContent += text.charAt(index);
+                    index++;
+
+                    // Scroll automático durante a digitação
+                    messageArea.scrollTop = messageArea.scrollHeight;
+
+                    setTimeout(type, speed);
+                } else {
+                    // Rolagem automática após a mensagem ser completamente digitada
+                    messageArea.scrollTop = messageArea.scrollHeight;
+                    if (callback) callback(); // Chama o callback após a mensagem ser digitada
+                }
+            }
+
+            type();
+        }
+
+        function showWelcomeMessage() {
+            const messages = [
+                "Bem-vindo! Escolha uma das opções abaixo digitando o número correspondente ou clicando na opção:",
+                "1. Currículo",
+                "2. Número de Telefone",
+                "3. E-mail",
+                "4. LinkedIn",
+                "5. Instagram",
+                "6. Informações sobre mim",
+                "7. Conhecimentos (skills)",
+                "8. Certificações",
+                "9. Projetos",
+                "10. GitHub",
+                "11. Perfil no site Workana"
+            ];
+
+            // Função recursiva para enviar cada mensagem sequencialmente
+            function sendSequentialMessages(index) {
+                if (index < messages.length) {
+                    appendMessage('bot', messages[index], () => sendSequentialMessages(index + 1));
+                }
+            }
+
+            sendSequentialMessages(0);
+        }
+
+        function processUserInput(input) {
+            let response;
+
+            switch (input.trim()) {
+                case '1':
+                    response = "Aqui está o link para o meu currículo: [link do currículo]";
+                    break;
+                case '2':
+                    response = "Meu número de telefone é: (XX) XXXXX-XXXX";
+                    break;
+                case '3':
+                    response = "Você pode enviar um e-mail para: seuemail@dominio.com";
+                    break;
+                case '4':
+                    response = "Confira meu LinkedIn: [link do LinkedIn]";
+                    break;
+                case '5':
+                    response = "Siga-me no Instagram: [link do Instagram]";
+                    break;
+                case '6':
+                    response = "Sou um desenvolvedor front-end apaixonado por criar interfaces incríveis.";
+                    break;
+                case '7':
+                    response = "Tenho conhecimentos em HTML, CSS, JavaScript, React, e muito mais.";
+                    break;
+                case '8':
+                    response = "Possuo certificações em várias tecnologias e metodologias.";
+                    break;
+                case '9':
+                    response = "Confira meus projetos na seção de portfólio!";
+                    break;
+                case '10':
+                    response = "Aqui está meu GitHub: [link do GitHub]";
+                    break;
+                case '11':
+                    response = "Veja meu perfil no Workana: [link do Workana]";
+                    break;
+                default:
+                    response = "Desculpe, não entendi. Por favor, escolha uma opção válida.";
+                    appendMessage('bot', response, showWelcomeMessage); // Envia a mensagem de erro e depois a welcomeMessage
+                    return;
+            }
+
+            appendMessage('bot', response);
+        }
     }
-  });
+});
 
-function sendMessage() {
-  var inputField = document.getElementById("chatbot-input");
-  var message = inputField.value.trim();
 
-  if (message !== "") {
-    appendMessage("user", message);
-    getBotResponse(message);
-    inputField.value = "";
-  }
-}
 
-function appendMessage(sender, message) {
-  var messageArea = document.getElementById("chatbot-messages");
-  var messageDiv = document.createElement("div");
-  messageDiv.className =
-    "message " + (sender === "user" ? "user-message" : "bot-message");
-  messageDiv.textContent = message; // Usar textContent para texto puro
-  messageArea.appendChild(messageDiv);
-  messageArea.scrollTop = messageArea.scrollHeight;
-}
 
-function typeMessage(sender, message) {
-  var messageArea = document.getElementById("chatbot-messages");
-  var messageDiv = document.createElement("div");
-  messageDiv.className =
-    "message " + (sender === "user" ? "user-message" : "bot-message");
-  messageArea.appendChild(messageDiv);
 
-  var i = 0;
-  var speed = 10; // Velocidade do efeito de digitação (em milissegundos)
 
-  function typingEffect() {
-    if (i < message.length) {
-      messageDiv.textContent += message.charAt(i); // Adicionar texto puro
-      i++;
-      setTimeout(typingEffect, speed);
-    }
-  }
 
-  typingEffect();
-  messageArea.scrollTop = messageArea.scrollHeight;
-}
 
-function getBotResponse(message) {
-  var lowerCaseMessage = message.trim().toLowerCase();
-  var options = {
-    1: "currículo",
-    2: "número de telefone",
-    3: "e-mail",
-    4: "linkedin",
-    5: "instagram",
-    6: "informações sobre mim",
-    7: "conhecimentos",
-    8: "certificações",
-    9: "projetos",
-    10: "github",
-    11: "workana"
-  };
 
-  if (options[lowerCaseMessage]) {
-    provideInformation(options[lowerCaseMessage]);
-  } else {
-    var response = `
-            Desculpe, não entendi sua escolha.\n\n
-            Por favor, digite um número de 1 a 11 para escolher uma opção:\n\n
-            1. Currículo\n
-            2. Número de telefone\n
-            3. E-mail\n
-            4. LinkedIn\n
-            5. Instagram\n
-            6. Informações sobre mim\n
-            7. Conhecimentos\n
-            8. Certificações\n
-            9. Projetos\n
-            10. GitHub\n
-            11. Workana
-        `;
-    setTimeout(function () {
-      typeMessage("bot", response);
-    }, 1000);
-  }
-}
 
-function provideInformation(option) {
-  var responses = {
-    currículo: "Você pode visualizar meu currículo [aqui](#).",
-    "número de telefone": "Meu número de telefone é (XX) XXXX-XXXX.",
-    "e-mail": "Você pode me enviar um e-mail para exemplo@dominio.com.",
-    linkedin: "Confira meu LinkedIn [aqui](#).",
-    instagram: "Siga-me no Instagram [aqui](#).",
-    "informações sobre mim":
-      "Sou um desenvolvedor front-end com experiência em várias tecnologias web.",
-    conhecimentos:
-      "Tenho conhecimentos em HTML, CSS, JavaScript, React, e outras tecnologias front-end.",
-    certificações: "Possuo certificações em desenvolvimento web e JavaScript.",
-    projetos: "Confira meus projetos na seção de portfólio do meu site.",
-    github: "Veja meu perfil no GitHub [aqui](#).",
-    workana: "Confira meu perfil no Workana [aqui](#)."
-  };
 
-  var response = responses[option] || "Desculpe, não entendi sua solicitação.";
 
-  setTimeout(function () {
-    typeMessage("bot", response);
-  }, 1000);
-}
+
+
