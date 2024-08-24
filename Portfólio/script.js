@@ -220,7 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
           break;
         case "9":
           response =
-            "Confira alguns dos meus projetos na seção de TRABALHOS e no <a href='https://github.com/leosportt' target='_blank' class='link-1'>meu GitHub</a>.";
+            "Confira alguns dos meus projetos na seção de 'Trabalhos' e no <a href='https://github.com/leosportt' target='_blank' class='link-1'>meu GitHub</a>.";
           break;
         case "10":
           response =
