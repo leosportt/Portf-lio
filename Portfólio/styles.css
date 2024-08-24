@@ -22,6 +22,24 @@
   padding: 1px;
 }
 
+@media (max-width: 61.25em) {
+  #chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 350px;
+    max-height: 500px;
+    background: #303841;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Garantir que o chatbot fique sobre outros elementos */
+    display: flex;
+    flex-direction: column;
+    padding: 1px;
+  }
+}
+
 /* Estilo para o cabeçalho do chatbot */
 #chatbot-header {
   display: flex;
@@ -35,12 +53,37 @@
   position: relative;
 }
 
+@media (max-width: 61.25em) {
+  #chatbot-header {
+    display: flex;
+    align-items: center;
+    background: #be3144; /* Cor de fundo do cabeçalho */
+    color: #ffffff;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    height: 75px;
+    font-size: 40px;
+  }
+}
+
 /* Estilo para o avatar no cabeçalho */
 #chatbot-header img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   margin-right: 10px;
+}
+
+@media (max-width: 61.25em) {
+  #chatbot-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
 }
 
 /* Estilo para o corpo do chatbot */
@@ -51,6 +94,17 @@
   display: none;
   flex-direction: column;
   font-size: 75%;
+}
+
+@media (max-width: 61.25em) {
+  #chatbot-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px;
+    display: none;
+    flex-direction: column;
+    font-size: 100%;
+  }
 }
 
 /* Quando o chatbot está aberto */
