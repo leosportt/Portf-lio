@@ -6,10 +6,10 @@
 
 Leonardo Igor
 
-# Código
+## Código
 
-<li><a href="https://github.com/leosportt/Portf-lio/tree/main/Portf%C3%B3lio">Código Fonte</a></li>
+<a href="https://github.com/leosportt/Portf-lio/tree/main/Portf%C3%B3lio">Código Fonte</a>
 
-# Apresentação
+## Apresentação
 
 Meu site de Portfólio.
