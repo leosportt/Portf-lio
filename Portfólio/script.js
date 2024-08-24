@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "<button class='option-button' data-option='4'>4. LinkedIn</button>",
         "<button class='option-button' data-option='5'>5. Instagram</button>",
         "<button class='option-button' data-option='6'>6. Sobre mim</button>",
-        "<button class='option-button' data-option='7'>7. Conhecimentos (skills)</button>",
+        "<button class='option-button' data-option='7'>7. Conhecimentos</button>",
         "<button class='option-button' data-option='8'>8. Objetivo</button>",
         "<button class='option-button' data-option='9'>9. Projetos</button>",
         "<button class='option-button' data-option='10'>10. GitHub</button>",
