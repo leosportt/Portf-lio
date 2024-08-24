@@ -1,6 +1,6 @@
 # PORTFÓLIO: My Home Page
 
-`LINK` <li><a href="https://leohomepage.vercel.app/">leohomepage.vercel.app</a></li>
+`LINK` <a href="https://leohomepage.vercel.app/">leohomepage.vercel.app</a>
 
 ## Integrante
 
