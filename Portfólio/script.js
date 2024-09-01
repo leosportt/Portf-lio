@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
           break;
         case "5":
           response =
-            "Siga-me no Instagram: <a href='https://www.instagram.com/l.igorr/' target='_blank' class='link-1'>Meu Instagram</a>.";
+            "Siga-me no Instagram: <a href='https://www.instagram.com/leo_homepage/' target='_blank' class='link-1'>Meu Instagram</a>.";
           break;
         case "6":
           response =
