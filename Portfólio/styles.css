@@ -22,7 +22,7 @@
   padding: 1px;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 61.25em) {
   #chatbot {
     position: fixed;
     bottom: 20px;
@@ -53,7 +53,7 @@
   position: relative;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 61.25em) {
   #chatbot-header {
     display: flex;
     align-items: center;
@@ -77,7 +77,7 @@
   margin-right: 10px;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 61.25em) {
   #chatbot-header img {
     width: 50px;
     height: 50px;
@@ -96,7 +96,7 @@
   font-size: 75%;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 61.25em) {
   #chatbot-body {
     flex: 1;
     overflow-y: auto;
@@ -262,9 +262,21 @@ html {
   font-size: 62.5%;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media (max-width: 61.25em) {
   html {
     font-size: 58%;
+  }
+}
+
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
   }
 }
 
@@ -294,7 +306,7 @@ body {
     blink-caret 0.75s step-end infinite;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 61.25em) {
   .typing-container {
     padding-right: 54%;
     font-size: 4.5rem;
@@ -343,7 +355,7 @@ h1 {
   font-size: 6rem;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 61.25em) {
   h1 {
     font-size: 8rem;
   }
@@ -353,7 +365,7 @@ h2 {
   font-size: 4.2rem;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 61.25em) {
   h2 {
     font-size: 8rem;
   }
@@ -380,7 +392,7 @@ img {
   right: 142rem;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 61.25em) {
   .icon-1 {
     position: relative;
     right: 75;
@@ -400,7 +412,7 @@ img {
   z-index: 10;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 61.25em) {
   .nav {
     display: flex;
     justify-content: flex-end;
@@ -420,7 +432,7 @@ img {
   margin-right: 2rem;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 61.25em) {
   .nav-list {
     display: flex;
     margin-right: 0rem;
@@ -433,7 +445,7 @@ img {
   padding: 2rem;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 61.25em) {
   .nav-list a {
     display: block;
     font-size: 4.5rem;
@@ -445,7 +457,7 @@ img {
   background: var(--main-blue);
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 28.75em) {
   .nav {
     justify-content: center;
   }
@@ -480,7 +492,7 @@ section {
   background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 61.25em) {
   .welcome-section {
     display: inline-flex;
     flex-direction: column;
@@ -497,7 +509,7 @@ section {
   padding-top: 10rem;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 61.25em) {
   .welcome-hello {
     padding-top: 55rem;
   }
@@ -514,7 +526,7 @@ section {
   color: var(--main-red);
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 61.25em) {
   .welcome-hello-2 {
     font-size: 4.5rem;
     padding-left: 2%;
@@ -535,7 +547,7 @@ section {
   padding-bottom: 1rem;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 61.25em) {
   .know-links {
     display: inline-table;
     text-align: center;
@@ -546,7 +558,7 @@ section {
   font-size: 3.06rem;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 61.25em) {
   .know-details {
     font-size: 5.5rem;
   }
@@ -568,7 +580,7 @@ section {
   text-align: justify;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 61.25em) {
   .welcome-text {
     font-size: 4.5rem;
     padding-left: 2%;
@@ -590,7 +602,7 @@ section {
   padding-top: 1rem;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 61.25em) {
   .image-photo,
   .image-photo-2,
   .image-photo-3 {
@@ -619,7 +631,7 @@ section {
   height: auto;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 61.25em) {
   .computer-legend .image-computer {
     width: 250px;
     height: auto;
@@ -643,7 +655,7 @@ section {
   transition: opacity 0.3s;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 61.25em) {
   .computer-legend .computer-text {
     visibility: hidden;
     width: 160px;
@@ -687,7 +699,7 @@ section {
   padding-top: 1rem;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 61.25em) {
   .image-computer {
     display: block;
     position: relative;
@@ -725,7 +737,7 @@ section {
   border-bottom: 0.2rem solid var(--main-white);
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 28.75em) {
   .projects-section-header {
     font-size: 4rem;
   }
@@ -742,7 +754,7 @@ section {
   padding: 2rem 0rem;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 30.625em) {
   .projects-section {
     padding: 6rem 1rem;
   }
@@ -792,7 +804,7 @@ section {
   transition: background 0.3s ease-out;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 61.25em) {
   .btn-show-all {
     font-size: 5rem;
     background: var(--main-gray);
@@ -828,7 +840,7 @@ section {
   background: var(--main-gray);
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 61.25em) {
   .contact-section {
     display: flex;
     flex-direction: column;
@@ -846,9 +858,15 @@ section {
   font-size: 6rem;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 61.25em) {
   .contact-section-header > h2 {
     font-size: 8rem;
+  }
+}
+
+@media (max-width: 28.75em) {
+  .contact-section-header > h2 {
+    font-size: 4rem;
   }
 }
 
@@ -856,7 +874,7 @@ section {
   font-style: italic;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 61.25em) {
   .contact-section-header > p {
     font-style: italic;
     font-size: 4.5rem;
@@ -872,7 +890,7 @@ section {
   flex-wrap: wrap;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 61.25em) {
   .contact-links {
     display: inline-table;
     text-align: center;
@@ -886,7 +904,7 @@ section {
   transition: transform 0.3s ease-out;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 61.25em) {
   .contact-details {
     font-size: 5.5rem;
     text-shadow: 2px 2px 1px #1f1f1f;
@@ -896,6 +914,18 @@ section {
 
 .contact-details:hover {
   transform: translateY(8px);
+}
+
+@media (max-width: 28.75em) {
+  .contact-details {
+    font-size: 2rem;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+  }
 }
 
 /* Rodapé */
