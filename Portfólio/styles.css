@@ -262,21 +262,9 @@ html {
   font-size: 62.5%;
 }
 
-@media (max-width: 75em) {
-  html {
-    font-size: 60%;
-  }
-}
-
 @media (max-width: 1280px) {
   html {
     font-size: 58%;
-  }
-}
-
-@media (max-width: 28.75em) {
-  html {
-    font-size: 55%;
   }
 }
 
@@ -864,12 +852,6 @@ section {
   }
 }
 
-@media (max-width: 28.75em) {
-  .contact-section-header > h2 {
-    font-size: 4rem;
-  }
-}
-
 .contact-section-header > p {
   font-style: italic;
 }
@@ -914,18 +896,6 @@ section {
 
 .contact-details:hover {
   transform: translateY(8px);
-}
-
-@media (max-width: 28.75em) {
-  .contact-details {
-    font-size: 2rem;
-  }
-
-  .contact-links {
-    flex-direction: column;
-    align-items: center;
-    padding-top: 2rem;
-  }
 }
 
 /* Rodapé */
