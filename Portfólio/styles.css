@@ -399,6 +399,10 @@ img {
     }
 }
 
+.fas {
+  line-height: inherit;
+}
+
 .nav {
     display: flex;
     justify-content: flex-end;
@@ -414,7 +418,7 @@ img {
         display: flex;
         justify-content: flex-end;
         position: relative;
-        width: auto;
+        width: 100%;
         background: var(--main-red);
         box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
         height: auto;
@@ -423,14 +427,13 @@ img {
 
 .nav-list {
   display: flex;
-  margin-right: 0rem;
 }
 
 @media (max-width: 61.25em) {
-  .nav-list {
-    display: flex;
-    margin-right: 0rem;
-  }
+    .nav-list {
+        display: flex;
+        padding: inherit;
+    }
 }
 
 .nav-list a {
