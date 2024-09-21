@@ -442,9 +442,9 @@ img {
 
 @media (max-width: 61.25em) {
     .nav-list a {
-        display: flex;
-        font-size: 5rem;
-        padding: 4rem;
+        display: block;
+        font-size: 3rem;
+        padding: 3rem;
         justify-content: flex-start;
     }
 }
