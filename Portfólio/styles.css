@@ -367,7 +367,7 @@ h2 {
 
 @media (max-width: 61.25em) {
     h2 {
-        font-size: 4rem;
+        font-size: 6rem;
         text-align: center;
     }
 }
@@ -541,9 +541,7 @@ section {
 }
 
 .welcome-title {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    display: grid;
+    display: flex;
 }
 
 .welcome-title-2 {
