@@ -59,15 +59,16 @@
         align-items: center;
         background: #be3144;
         color: #ffffff;
-        padding: 5%;
+        padding: 2%;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         cursor: pointer;
         position: relative;
-        height: 100%;
+        height: auto;
         font-size: xxx-large;
     }
 }
+
 
 /* Estilo para o avatar no cabeçalho */
 #chatbot-header img {
