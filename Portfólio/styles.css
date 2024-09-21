@@ -357,7 +357,7 @@ h1 {
 
 @media (max-width: 61.25em) {
   h1 {
-    font-size: 8rem;
+    font-size: 6.5rem;
   }
 }
 
@@ -366,9 +366,10 @@ h2 {
 }
 
 @media (max-width: 61.25em) {
-  h2 {
-    font-size: 8rem;
-  }
+    h2 {
+        font-size: 4rem;
+        text-align: center;
+    }
 }
 
 ul {
@@ -487,19 +488,21 @@ section {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 350vh;
+  height: auto;
   background-color: #000;
   background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 @media (max-width: 61.25em) {
   .welcome-section {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 380vh;
+    height: auto;
     background-color: #000;
     background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
   }
@@ -547,6 +550,11 @@ section {
   padding-bottom: 1rem;
 }
 
+.know-links {
+    padding: inherit;
+    text-align: center;
+}
+
 @media (max-width: 61.25em) {
   .know-links {
     display: inline-table;
@@ -571,22 +579,20 @@ section {
 
 .welcome-text {
   position: relative;
-  left: 1.5%;
-  padding-left: 33.5rem;
-  padding-right: 33.5rem;
+  padding: inherit;
   font-size: 3rem;
   font-weight: 200;
   color: var(--main-red);
   text-align: justify;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 @media (max-width: 61.25em) {
-  .welcome-text {
-    font-size: 4.5rem;
-    padding-left: 2%;
-    padding-right: 5%;
-    text-align: justify;
-  }
+    .welcome-text {
+        font-size: 3rem;
+        text-align: justify;
+    }
 }
 
 /* Imagens da Seção de Boas-vindas */
@@ -627,8 +633,8 @@ section {
 }
 
 .computer-legend .image-computer {
-  width: 200px;
-  height: auto;
+    width: 100%;
+    height: auto;
 }
 
 @media (max-width: 61.25em) {
@@ -696,19 +702,17 @@ section {
   right: 20%;
   width: 100%;
   height: auto;
-  padding-top: 1rem;
+  padding-top: 90%;
+  padding-bottom: 90%;
 }
 
 @media (max-width: 61.25em) {
-  .image-computer {
-    display: block;
-    position: relative;
-    right: 15%;
-    width: 100%;
-    height: 150%;
-    padding-top: 15rem;
-    padding-bottom: 10rem;
-  }
+    .image-computer {
+        display: block;
+        position: relative;
+        padding-top: 100%;
+        padding-bottom: 100%;
+    }
 }
 
 .btn-workana {
@@ -727,8 +731,10 @@ section {
 
 .projects-section {
   text-align: center;
-  padding: 10rem 2rem;
+  padding-top: 5%;
+  padding-bottom: 5%;
   background: var(--main-blue);
+  height: auto;
 }
 
 .projects-section-header {
@@ -835,8 +841,9 @@ section {
   align-items: center;
   text-align: center;
   width: 100%;
-  height: 80vh;
-  padding: 0 2rem;
+  height: auto;
+  padding-top: 5%;
+  padding-bottom: 5%;
   background: var(--main-gray);
 }
 
@@ -848,8 +855,7 @@ section {
     align-items: center;
     text-align: center;
     width: 100%;
-    height: 40vh;
-    padding: 0 2rem;
+    height: auto;
     background: var(--main-gray);
   }
 }
@@ -860,7 +866,7 @@ section {
 
 @media (max-width: 61.25em) {
   .contact-section-header > h2 {
-    font-size: 8rem;
+    font-size: 6.5rem;
   }
 }
 
@@ -877,7 +883,7 @@ section {
 @media (max-width: 61.25em) {
   .contact-section-header > p {
     font-style: italic;
-    font-size: 4.5rem;
+    font-size: 3rem;
   }
 }
 
