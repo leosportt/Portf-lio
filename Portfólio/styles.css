@@ -417,14 +417,12 @@ img {
     .nav {
         display: flex;
         justify-content: flex-end;
-        position: relative;
+        position: fixed;
         width: 100%;
         background: var(--main-red);
         box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
-        height: auto;
     }
 }
-
 .nav-list {
   display: flex;
 }
