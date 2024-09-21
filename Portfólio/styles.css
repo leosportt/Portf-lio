@@ -25,7 +25,7 @@
 @media (max-width: 61.25em) {
     #chatbot {
         position: fixed;
-        width: 50%;
+        width: 30%;
         max-height: inherit;
         background: #303841;
         border: 1px solid #ccc;
@@ -63,10 +63,10 @@
         cursor: pointer;
         position: relative;
         height: auto;
-        font-size: 3.5rem;
+        font-size: x-large;
+        margin: inherit;
     }
 }
-
 
 /* Estilo para o avatar no cabeçalho */
 #chatbot-header img {
@@ -77,12 +77,11 @@
 }
 
 @media (max-width: 61.25em) {
-  #chatbot-header img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
+    #chatbot-header img {
+        width: auto;
+        border-radius: 50%;
+        margin: 1%;
+    }
 }
 
 /* Estilo para o corpo do chatbot */
@@ -422,6 +421,7 @@ img {
         box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
     }
 }
+
 .nav-list {
   display: flex;
 }
