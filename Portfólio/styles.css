@@ -23,21 +23,19 @@
 }
 
 @media (max-width: 61.25em) {
-  #chatbot {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 350px;
-    max-height: 500px;
-    background: #303841;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000; /* Garantir que o chatbot fique sobre outros elementos */
-    display: flex;
-    flex-direction: column;
-    padding: 1px;
-  }
+    #chatbot {
+        position: fixed;
+        width: 50%;
+        max-height: inherit;
+        background: #303841;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        padding: inherit;
+    }
 }
 
 /* Estilo para o cabeçalho do chatbot */
