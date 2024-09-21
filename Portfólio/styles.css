@@ -541,13 +541,15 @@ section {
 }
 
 .welcome-title {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: grid;
 }
 
 .welcome-title-2 {
-  padding-top: 0rem;
-  padding-bottom: 1rem;
+    padding-top: 0rem;
+    padding-bottom: 1rem;
+    display: grid;
 }
 
 .know-links {
@@ -573,8 +575,9 @@ section {
 }
 
 .welcome-title-3 {
-  padding-top: 0rem;
-  padding-bottom: 1rem;
+    padding-top: 0rem;
+    padding-bottom: 1rem;
+    display: grid;
 }
 
 .welcome-text {
