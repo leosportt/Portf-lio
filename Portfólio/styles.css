@@ -389,16 +389,14 @@ img {
 /* Navegação */
 
 .icon-1 {
-  position: relative;
-  right: 142rem;
+    position: absolute;
+    left: 0.1%;
 }
 
 @media (max-width: 61.25em) {
-  .icon-1 {
-    position: relative;
-    right: 75;
-    top: 8;
-  }
+    .icon-1 {
+        position: absolute;
+    }
 }
 
 .nav {
@@ -424,7 +422,7 @@ img {
     background: var(--main-red);
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
     z-index: 10;
-    height: 150;
+    height: auto;
   }
 }
 
@@ -447,11 +445,11 @@ img {
 }
 
 @media (max-width: 61.25em) {
-  .nav-list a {
-    display: block;
-    font-size: 4.5rem;
-    padding: 4.5rem;
-  }
+    .nav-list a {
+        display: flex;
+        font-size: 5rem;
+        padding: 4rem;
+    }
 }
 
 .nav-list a:hover {
