@@ -778,20 +778,20 @@ section {
 }
 
 .project-image {
-  height: 75%;
+  height: 70%;
   width: 100%;
-  object-fit: cover;
+  object-fit: inherit;
 }
 
 .project-title {
   font-size: 2rem;
-  padding: 0rem 0.5rem;
+  padding: 2rem 0.5rem;
   padding-top: 1.5rem;
 }
 
 .project-title-2 {
   font-size: 2rem;
-  padding: 10.5rem 0.5rem;
+  padding: 2rem 0.5rem;
   padding-top: 1.5rem;
 }
 
