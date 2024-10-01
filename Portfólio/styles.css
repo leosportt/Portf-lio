@@ -8,12 +8,12 @@
 /* Estilo para o chatbot */
 #chatbot {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 300px;
-  max-height: 500px;
+  bottom: 2%;
+  right: 2%;
+  width: 20%;
+  max-height: 50%;
   background: #303841;
-  border: 1px solid #ccc;
+  border: 2px solid #ccc;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   z-index: 1000; /* Garantir que o chatbot fique sobre outros elementos */
@@ -25,10 +25,10 @@
 @media (max-width: 61.25em) {
     #chatbot {
         position: fixed;
-        width: 30%;
-        max-height: inherit;
+        width: 35%;
+        max-height: 50%;
         background: #303841;
-        border: 1px solid #ccc;
+        border: 3px solid #ccc;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         z-index: 1000;
@@ -57,13 +57,13 @@
         align-items: center;
         background: #be3144;
         color: #ffffff;
-        padding: 2%;
+        padding: 5%;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         cursor: pointer;
         position: relative;
         height: auto;
-        font-size: x-large;
+        font-size: xx-large;
         margin: inherit;
     }
 }
@@ -491,7 +491,7 @@ section {
 
 @media (max-width: 61.25em) {
   .welcome-section {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -499,16 +499,18 @@ section {
     height: auto;
     background-color: #000;
     background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+    padding: inherit;
+    padding-bottom: 5%;
   }
 }
 
 .welcome-hello {
-  padding-top: 10rem;
+  padding-top: 15%;
 }
 
 @media (max-width: 61.25em) {
   .welcome-hello {
-    padding-top: 55rem;
+    padding-top: 25%;
   }
 }
 
@@ -613,13 +615,13 @@ section {
     width: 70%;
     margin: 0 auto;
     right: auto;
-    padding-top: 15rem;
+    padding-top: 30%;
   }
 }
 
 .image-photo-2,
 .image-photo-3 {
-  padding-top: 20rem;
+  padding-top: 30%;
 }
 
 .computer-legend {
@@ -748,8 +750,8 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 6rem;
-  width: 100%;
-  max-width: 1170px;
+  width: 75%;
+  max-width: 75%;
   margin: 0 auto;
   margin-bottom: 6rem;
   padding: 2rem 0rem;
@@ -896,6 +898,7 @@ section {
     display: inline-table;
     text-align: center;
     padding-top: 15rem;
+    padding-bottom: 15rem;
   }
 }
 
